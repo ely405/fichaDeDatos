@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Ficha de datos</title>
+  </head>
+<body>
+  <div>
+    <h1>Ficha de datos</h1>
+  </div>
+  <div>
+    <form onsubmit="return false" id="formulario">
+      <fieldset>
+        <legend>Ficha</legend>
+          <label for="name">Nombre:</label>
+          <input class="datos" type="text" name="nombre" id="name" required><br><br>
+          <label for="lastName">Apellido:</label>
+          <input class="datos" type="text" name="apellido" id="lastName" required><br><br>
+          <label for="nDNI">DNI:</label>
+          <input class="datos" type="text" name="dni" id="nDNI" pattern="[/0-9]{8}" required><br><br>
+          <label for="direction">Dirección:</label>
+          <input class="datos" type="text" name="direccion" id="direction" required><br><br>
+          <button type="submit" name="enviar" onclick="imprime()">Enviar</button>
+          <button type="button" name="borrar" onclick="limpiar()">Limpiar</button>
+      </fieldset>
+    </div>
+    <hr>
+    <h2>Datos personales</h2>
+    <div id="reporte">
+    </div>
+  </form>
+  <script type="text/javascript" src="ASSETS/JS/datos.js"></script>
+</body>
+</html>
