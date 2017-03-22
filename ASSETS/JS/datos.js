@@ -13,8 +13,12 @@ function imprime(){
                           +"<li>Dirección:"+ingDireccion+"</li>"
                         +"</ul>";
   }
-  //document.getElementById("formulario").reset();
 }
 function limpiar(){
   document.getElementById("formulario").reset();
 }
+
+window.addEventListener("load", function(){
+  document.getElementById("btnImprime").addEventListener("click", imprime);
+  document.getElementById("btnLimpia").addEventListener("click", limpiar);
+});
